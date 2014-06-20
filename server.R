@@ -4,10 +4,6 @@ games <- read.csv("boardgames.csv")
 
 
 shinyServer(function(input,output){
-    output$oplayers <- renderText({input$players})
-    output$oages <- renderText({input$ages})
-    output$otime <- renderText({input$time})
-    output$ogenre <- renderText({input$genre})
     output$ogames <- renderDataTable({
             n <- input$players
             a <- input$ages
